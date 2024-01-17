@@ -11,3 +11,6 @@
 |CS|PIN 4|
 |RST|PIN 2|
 |G1|PIN 9|
+
+***
+**Circuit Diagram**
