@@ -15,4 +15,4 @@
 ---
 **Circuit Diagram**
 
-![mega_lora_wiring](https://github.com/ming-ki/LoRaWAN-Mega/assets/74133495/e34e5061-5ed1-44c0-8aab-b35362874fa8)
+![mega_lora_wiring2](https://github.com/ming-ki/LoRaWAN-Mega/assets/74133495/d4bbe6e6-44e8-44d8-93cb-663cbed268cc)
