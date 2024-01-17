@@ -1,8 +1,17 @@
 #include "DHTStable.h"              //DHT22
 #include "DFRobot_OzoneSensor.h"
 
-DHTStable DHT;
 #define DHT22_PIN       6
+#define COLLECT_NUMBER   20              // collect number, the collection range is 1-100
+#define Ozone_IICAddress OZONE_ADDRESS_3
+
+DHTStable DHT;
+DFRobot_OzoneSensor Ozone;
+float temp, humi;
+char CO_data[60];    //Hardware-designed co data archiving
+char NO2_data[60];    //Hardware-designed no2 data archiving
+char SO2_data[60];    //Hardware-designed so2 data archiving
+
 struct
 {
     uint32_t total;
@@ -15,13 +24,6 @@ struct
     uint32_t unknown;
 } counter = { 0,0,0,0,0,0,0,0};
 
-#define COLLECT_NUMBER   20              // collect number, the collection range is 1-100
-#define Ozone_IICAddress OZONE_ADDRESS_3
-DFRobot_OzoneSensor Ozone;
-float temp, humi;
-char CO_data[60];    //Hardware-designed co data archiving
-char NO2_data[60];    //Hardware-designed no2 data archiving
-char SO2_data[60];    //Hardware-designed so2 data archiving
 void setup(){
   Serial.begin(9600);
   Serial3.begin(9600);        //SO2
@@ -32,7 +34,6 @@ void setup(){
 }
 
 void loop(){
-
     //SO2, NO2, CO
     Serial1.write('\r');
     Serial2.write('\r');
