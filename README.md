@@ -1,6 +1,6 @@
 # LoRaWAN-Mega
 
-|Mega 2560|Adafruit RFM69HCW    
+|Adafruit RFM69HCW|Mega 2560    
 |:------:|:---:|
 |3.3V|VCC|
 |GND|GND|
